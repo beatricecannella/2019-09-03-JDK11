@@ -145,8 +145,8 @@ public class Model {
 	}
 		public double sommaPesi(List<Portion> parziale) {
 			double tot = 0;
-				for(int i = 0; i<parziale.size(); i++) {
-					tot += this.grafo.getEdgeWeight(this.grafo.addEdge(parziale.get(i),parziale.get(i+1)));
+				for(int i = 0; i<parziale.size()-1; i++) {
+					tot += this.grafo.getEdgeWeight(this.grafo.getEdge(parziale.get(i),parziale.get(i+1)));
 				}
 			return tot;
 			
